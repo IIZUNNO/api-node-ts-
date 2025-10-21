@@ -17,3 +17,67 @@ cd api-node-ts
 
 # Installer les dépendances
 npm install
+
+#Créer le fichier .env à la racine du projet
+echo "PORT=4000" > .env
+
+## 🚀 Lancement
+
+```bash
+# Mode développement / lance le serveur avec rechargement automatique
+
+npm run dev
+
+# Mode Production
+
+```bash
+#Compiler le code TypeScript
+npm run build
+
+#Lancer la version compilée
+npm start
+
+## Description des Routes
+
+```bash
+
+Route Racine 
+Méthode : GET
+URL : http://localhost:4000/
+Description : Route de test pour vérifier le bon fonctionnement de l'API
+
+Réponse : "✅ API Node.js avec TypeScript fonctionne !"
+
+## Récuperer tous les utilisateurs
+
+Méthode : GET
+URL : http://localhost:4000/users
+Description : Retourne la liste complète des utilisateurs
+
+Réponse : {
+            "users": [
+                {
+                  "name":"Alice",
+                  "email": "alice@example.com"
+                }
+            ]
+          }
+
+## Ajouter un nouvel utilisateur
+
+Méthode : POST
+URL: http://localhost:4000/users
+Headers : Content-Type: application/json
+Body : 
+        {
+        "name": "Alice",
+        "email":"alice@example.com
+        }
+
+Réponse :
+
+    {
+      "message": "Utilisateur Alice ajouté avec succès!",
+      "email": "alice@example.com
+       }
+
